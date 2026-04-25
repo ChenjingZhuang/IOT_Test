@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "author": "Chenj",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -9.6, "left": -4.76, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 257.2, "left": 67.2, "attrs": {} },
+    { "type": "wokwi-ky-040", "id": "encoder1", "top": 164.9, "left": 143.2, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "servo1:GND", "esp:GND.3", "black", [ "h0" ] ],
+    [ "servo1:V+", "esp:5V", "green", [ "h0" ] ],
+    [ "servo1:PWM", "esp:5", "green", [ "h0" ] ],
+    [ "encoder1:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "encoder1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "encoder1:CLK", "esp:18", "green", [ "h0" ] ],
+    [ "encoder1:DT", "esp:19", "green", [ "h0" ] ],
+    [ "encoder1:SW", "esp:21", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
